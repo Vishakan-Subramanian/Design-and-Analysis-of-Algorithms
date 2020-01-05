@@ -1,0 +1,29 @@
+*3 Insertion sort
+1. The input to function ordered insert(a) is an array a[0:n] of n integers. The precondition is: the items of the array are in non-decreasing (ascending) order except the last item
+(that at n-1) which may be out of order. The postcondition is that a[0:n] is sorted, that is,
+the out-of-order item has been brought to its right position. Use this iterative step: keep
+swapping the out-of-order item until it comes to the “right” position, that is, ordered with
+its neighbors.
+
+2
+2. Modify ordered insert(a) to ordered insert(a, n) that inserts a[n-1] in the right
+place in a[0:n-1].
+
+3. Solve problem 2; but use recursion instead of iteration.
+
+4. Solve problem 2, but use a slighly different iterative step: back up a[n-1] in a variable. Then
+keep shifting the items of the array to the right until the correct position for the out-of-order
+item is found; then, in that position, insert the out-of-order item from its backup variable.
+
+5. You are given as input an array a[0:n] of n numbers. The output should be sorted a[0:n].
+Break the problem into a[0:n-1] and a[n-1]. Sort a[0:n-1] recursively. Then, insert
+a[n-1] in the right place in a[0:n-1] using ordered insert(a, n).
+
+6. The input is an array of N numbers. The array is sorted in ascending order except for the
+first number (that at 0), which may be out of order. The output should be a sorted array of N
+original numbers which include the out-of-order number.
+
+7. The input is an array of whole numbers. The numbers are stored only at positions 1, 2, 4,
+8, 16, ... (powers of 2). We do not store anything in between. The elements of the array are
+sorted except the element at position 1. Rearrange the numbers so that the elements of the
+array are sorted.
