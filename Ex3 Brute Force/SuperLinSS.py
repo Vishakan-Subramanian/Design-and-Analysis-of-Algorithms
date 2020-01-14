@@ -8,8 +8,10 @@ def suffixMax(arr):
 	
 	return suffix_max
 
-def bfMaximalArraySL(suffix_max):
-	
+def bfMaximalArrayLinear(arr, suffix_max):
+	max_sum = 0
+	for i in range(len(arr):
+		max_sum = suffix_max
 
 
 
@@ -19,9 +21,9 @@ def main():
 	arr = list(map(int, input().split()))
 	print("Array: ",arr)	
 	
-	prefix_sum = prefixSum(arr)
+	suffix_max = suffixMax(arr)
 
-	i, j, ijsum = bfMaximalArrayQuad(arr, prefix_sum)
+	i, j, ijsum = bfMaximalArrayLinear(arr, suffix_max)
 	print("\ni : {0}\nj : {1}\nMaximal Subarray Sum: {2}".format(i,j,ijsum))
 	print("\nSubarray : Array[{0}:{1}]\n".format(i,j),arr[i:j])
 
