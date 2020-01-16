@@ -24,7 +24,7 @@ def main():
 	print("\ni : {0}\nj : {1}\nMaximal Subarray Sum: {2}".format(i,j,ijsum))
 	print("\nSubarray : Array[{0}:{1}]\n".format(i,j),arr[i:j])
 
-
+	#timeTester()
 
 main()
 

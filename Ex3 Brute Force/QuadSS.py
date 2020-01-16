@@ -10,18 +10,21 @@ def prefixSum(arr):
 	return prefix_sum
 	
 
-def bfMaximalArrayQuad(arr, prefix_sum):
+def bfMaximalArrayQuad(arr):
 	max_sum, max_i, max_j = 0, 0, 0
 
+	prefix_sum = prefixSum(arr)
+	print("Prefix Sum:\n",prefix_sum)
+
 	for i in range(len(arr)):
-		for j in range(i,len(arr)):
-			sub = arr[i+1:j+1]
-			cur_sum = prefix_sum[j] - prefix_sum[i]		
+		for j in range(i, len(arr)):
+			cur_sum = max(prefix_sum[j] - prefix_sum[i] + arr[i],0)	
+			print(i,j, cur_sum, prefix_sum[j], prefix_sum[i], arr[i])
 			if(cur_sum > max_sum):
 				max_sum = cur_sum
-				max_i, max_j = i+1,j+1
+				max_i, max_j = i,j
 
-	return max_i, max_j, max_sum 
+	return max_i, max_j+1, max_sum 
 
 
 def main():
@@ -30,12 +33,12 @@ def main():
 	arr = list(map(int, input().split()))
 	print("Array: ",arr)	
 	
-	prefix_sum = prefixSum(arr)
-
-	i, j, ijsum = bfMaximalArrayQuad(arr, prefix_sum)
+	i, j, ijsum = bfMaximalArrayQuad(arr)
 	print("\ni : {0}\nj : {1}\nMaximal Subarray Sum: {2}".format(i,j,ijsum))
-	print("\nSubarray : Array[{0}:{1}]\n".format(i,j),arr[i:j])
+	if(ijsum!=0):
+		print("\nSubarray : Array[{0}:{1}]\n".format(i,j),arr[i:j])
 
+	#timeTester()
 
 
 main()
