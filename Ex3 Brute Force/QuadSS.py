@@ -19,7 +19,7 @@ def bfMaximalArrayQuad(arr):
 	for i in range(len(arr)):
 		for j in range(i, len(arr)):
 			cur_sum = max(prefix_sum[j] - prefix_sum[i] + arr[i],0)	
-			print(i,j, cur_sum, prefix_sum[j], prefix_sum[i], arr[i])
+			#print(i,j, cur_sum, prefix_sum[j], prefix_sum[i], arr[i])
 			if(cur_sum > max_sum):
 				max_sum = cur_sum
 				max_i, max_j = i,j
