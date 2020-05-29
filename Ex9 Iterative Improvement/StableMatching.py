@@ -137,3 +137,45 @@ if __name__ == '__main__':
     get_input()
     print('\n\n\t\tImplementing the Gayle-Shapley Stable Matching Algorithm\n')
     gayle_shapley_stable_matching()
+    
+
+
+"""
+OUTPUT:
+
+vishakan@Legion:~/Desktop/Design-and-Analysis-of-Algorithms/Ex9 Iterative Improvement$ python StableMatching.py
+a  u  r  t   s
+b  r  t  u  s
+c  t  u  s  r
+d  u  r  t  s
+ 
+r  a  c  d  b
+s  d  a  b  c
+t  c  b  d  a 
+u  b  d  c  a
+
+
+
+		Implementing the Gayle-Shapley Stable Matching Algorithm
+
+Iteration 1 : a - u 
+
+Iteration 2 : a - u b - r 
+
+Iteration 3 : a - u b - r c - t 
+
+Iteration 4 : b - r c - t d - u 
+
+Iteration 5 : a - r c - t d - u 
+
+Iteration 6 : a - r c - t d - u 
+
+Iteration 7 : a - r b - u c - t 
+
+Iteration 8 : a - r b - u c - t 
+
+Iteration 9 : a - r b - u c - t 
+
+Iteration 10 : a - r b - u c - t d - s 
+
+"""
