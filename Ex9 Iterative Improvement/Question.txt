@@ -1,0 +1,27 @@
+You are given the preference lists of men and women. Implement an algorithm to find a stable matching.
+1. Let men and women represent men’s preference lists and women’s preference lists, respectively. Choose suitable data structures for them. Represent the following preference lists using the data structures.
+a: r q s     q: a c b 
+b: s q r      r: c a b
+c: q r s      s: a b c
+Given a matching, function is unstable() should test whether a given man-woman pair (m.w) is unstable or not. Implement the function. For each man and each woman, we wish to represent his/her currently matched partner also. Modify the data structure men and women to represent both match and the preference lists. Initialize the data structures.
+2. Define functions:
+(a) propose(m): man m proposes to his most preferred woman.
+(b) undo proposal(m): man m undoes his last proposal.
+(c) accept proposal(m, w): woman w accepts the proposal from man m.
+(d) reject proposal(w): woman w undoes the last proposal she accepted.
+
+Note that, since data structure men maintains the currently matched partner for each man, propose(m) and undo proposal(m) affects the state of data structure men only. Function accept proposal(m, w) changes the state of data structure women only. Function reject proposal(w) affects both men and women.
+
+3. Implement Gayle-Shapeley algorithm to find a stable matching. Print the state of currently matched partners after each iteration.
+
+4. The preference lists of men, followed by the preference lists of women, are given in a text file in the format shown below. Men and women are denoted by letters. Each man is followed by his preference list of women. Women’s preference lists are separated from the men’s preference lists by an empty line. Each woman is followed by her preference list of men.
+a  u  r  t   s
+b  r  t  u  s
+c  t  u  s  r
+d  u  r  t  s
+
+r  a  c  d  b
+s  d  a  b  c
+t  c  b  d  a 
+u  b  d  c  a
+Let your program read the preference lists from the file and populate the data structures men and women.
